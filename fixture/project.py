@@ -11,9 +11,9 @@ class ProjectHelper:
 
     def open_project_page(self):
         wd = self.app.wd
-        if not wd.current_url.endswith("manage_proj_page.php"):
-            wd.find_element_by_link_text("Manage").click()
-            wd.find_element_by_link_text("Manage Projects").click()
+        #if not wd.current_url.endswith("/manage_proj_page.php"):
+        wd.find_element_by_link_text("Manage").click()
+        wd.find_element_by_link_text("Manage Projects").click()
 
     def create(self, project):
         wd = self.app.wd

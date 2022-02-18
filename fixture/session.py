@@ -34,8 +34,9 @@ class SessionHelper:
         return self.get_logged_user() == username
 
     def get_logged_user(self):
-        wd=self.app.wd
-        return wd.find_element_by_css_selector("td.login-info-left span").text
+        wd = self.app.wd
+        return wd.find_element_by_xpath("//span[@class='user-info']").text
+            #wd.find_element_by_css_selector("td.login-info-left span").text
 
     def ensure_login(self, username, password):
         wd = self.app.wd
