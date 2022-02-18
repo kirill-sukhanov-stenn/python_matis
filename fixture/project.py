@@ -39,6 +39,7 @@ class ProjectHelper:
         time.sleep(2)
         wd.find_element_by_xpath("//input[@value='Delete Project']").click()
         time.sleep(2)
+        self.project_cache = None
 
     def change_field_value(self, field_name, text):
         wd = self.app.wd
