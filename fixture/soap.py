@@ -20,7 +20,6 @@ class SoapHelper:
         username = self.app.config["webadmin"]["username"]
         password = self.app.config["webadmin"]["password"]
 
-
         client = Client(self.app.base_url + "/api/soap/mantisconnect.php?wsdl")
         try:
             l = client.service.mc_projects_get_user_accessible(username, password)
